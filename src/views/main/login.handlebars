@@ -1,0 +1,42 @@
+<div class="col-lg-8">
+  <form action="/login" method = "post">
+
+         <div class="page-header ">
+              <h1 id="tables">Acesso de Usuario</h1>
+                
+            </div>
+
+            <div class="bs-component">
+
+<div class="form-group">
+                <label class="col-form-label mt-4" for="Username">Username</label>
+                <input type="text" class="form-control" placeholder="Default input" id="username" name ="username" value="{{username}}">
+
+                {{#if incorreto}}
+                        <div class="invalid-feedback" style = "display: block">Usuario ou senha incorreo</div>
+
+                {{/if}}
+                
+              </div>
+
+<div class="form-group">
+                <label class="col-form-label mt-4" for="senha">Senha</label>
+                <input type="password" class="form-control" placeholder="Default input" id="senha" name ="senha">
+                <!-- <div class="invalid-feedback" style = "display: block">{{showErrors errors "sigla"}}</div> -->
+              </div>
+
+<div class="form-group">
+    <input type="hidden" name = "_csrf" value = "{{csrf}}"/><!--Cookie-->
+    <button type="submit" class="btn btn-primary">Adicionar</button>
+</div>
+
+            </div><!-- /example -->
+          </div>
+  
+  
+  
+  </form>
+     
+    
+
+
